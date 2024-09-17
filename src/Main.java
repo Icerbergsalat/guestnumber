@@ -43,18 +43,15 @@ public class Main {
             medium = checkGuess(input.nextInt(), tal);
         }
     }
+
     public static void hardDifficulty(Scanner input) {
         boolean hard = true;
         System.out.println("gæt et tal fra 0-100");
-        int tal = (int)(Math.random()* 100);
-        do {
-            System.out.println("farvel");
-            checkGuess(input.nextInt(), tal);
+        int tal = (int)(Math.random() * 100);
+        while (hard) {
+            // Bed brugeren om et gæt og tjek det
             hard = checkGuess(input.nextInt(), tal);
-
-            System.out.println("hej");
-        } while (hard);
-
+        }
     }
 
     public static boolean checkGuess (int input, int numbrt){
